@@ -122,3 +122,38 @@ ul {
     background: #6cd9b1;
     border-color: #6cd9b1;
 }
+
+.hero-buttons a.github-btn {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.hero-buttons a.github-btn .github-icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+    flex: 0 0 18px;
+    object-fit: contain;
+}
+
+.hero-buttons a.contact-btn {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.hero-buttons a.contact-btn .arrow-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+
