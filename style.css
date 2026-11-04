@@ -7,6 +7,16 @@
     font-style: normal;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -15,22 +25,14 @@ body {
 
 body::before {
   content: "";
-  position: fixed;
   inset: 0;
   z-index: -1;
-
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.60),
-      rgba(0, 0, 0, 0.60)
-    ),
-    url("images/background.svg") center / cover no-repeat;
-
-  pointer-events: none;
+  position: fixed;
 }
 
 nav {
-    background-color: #203634;
+    /* background-color: #203634; */
+    background-color: rgba(64, 148, 117, 0.4);
     padding: 15px;
     font-family: 'SpaceGrotesk', sans-serif;
     position: fixed;
@@ -39,6 +41,8 @@ nav {
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
 }
 nav a {
     color: #F2F0E8;
@@ -53,7 +57,7 @@ ul {
 }
 
 main {
-    padding-top: 55px;
+    padding-top: 0px;
 }
 
 .home::after {
@@ -61,8 +65,25 @@ main {
     color: #B8D8CC;
     margin-left: 25px;
     display: inline-block;
-    top: -5px;
+    padding-top: 0px;
 }
+
+.hero {
+    min-height: 100vh;
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("images/background.svg") center / cover no-repeat;
+
+    pointer-events: none;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 55px;
+    margin: 0;
+}
+
 .hero h1 span {
     color: #6cd9b1;
     display: block;
@@ -78,6 +99,7 @@ main {
     line-height: 1.1;
     padding-left: 60px;
     padding-top: 15px;
+    margin-top: 15px;
 }
 
 .hero h1 span::after {
@@ -175,4 +197,58 @@ main {
     font-size: 20px ; 
 }
 
+.skills {
+    margin: 0;
+    min-height: 100vh;
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("images/Background2.svg") center / cover no-repeat;
 
+  pointer-events: none;
+  padding-top: 80px;
+}
+
+.skills h1 {
+    color: #6cd9b1;
+    font-family: 'SpaceGrotesk', sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    text-align: center;
+    
+}
+
+.hero,
+.skills {
+    scroll-snap-align: start;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  padding: 10px;
+  justify-content: center;
+  padding-top: 200px;
+  align-items: center;
+  gap: 50px;
+}
+.skill-grid div {
+  color: #F2F0E8;
+  background-color: #080909;
+  border: 1px solid #6cd9b1;
+  padding: 10px;
+  font-size: 30px;
+  text-align: right;
+  font-family: 'SpaceGrotesk', sans-serif;
+
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(108, 217, 177, 0.2);
+  border-radius: 14px;
+}
+
+.skill-grid div:hover {
+    transform: translateY(-5px);
+    border-color: #6cd9b1;
+    background-color: rgba(108, 217, 177, 0.1);
+}
