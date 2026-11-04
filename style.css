@@ -33,6 +33,12 @@ nav {
     background-color: #203634;
     padding: 15px;
     font-family: 'SpaceGrotesk', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 nav a {
     color: #F2F0E8;
@@ -45,6 +51,11 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+main {
+    padding-top: 55px;
+}
+
 .home::after {
     content: " |";
     color: #B8D8CC;
@@ -154,6 +165,14 @@ ul {
     width: 16px;
     height: 16px;
     flex-shrink: 0;
+}
+
+.description {
+    color: #F2F0E8;
+    font-family: 'SpaceGrotesk', sans-serif;
+    padding-top: 0px;
+    padding-left: 60px;
+    font-size: 20px ; 
 }
 
 
