@@ -77,7 +77,7 @@ main {
     ),
     url("images/background.svg") center / cover no-repeat;
 
-    pointer-events: none;
+    pointer-events: .hero;
     min-height: 100vh;
     box-sizing: border-box;
     padding-top: 55px;
@@ -86,7 +86,7 @@ main {
 
 .hero h1 span {
     color: #6cd9b1;
-    display: block;
+    display: inline-block;
     transition: text-decoration-color 0.3s ease;
     width: fit-content;
     position: relative;
@@ -224,31 +224,28 @@ main {
     scroll-snap-align: start;
 }
 
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 180px);
-  padding: 10px;
-  justify-content: center;
-  padding-top: 200px;
-  align-items: center;
-  gap: 50px;
-}
-.skill-grid div {
-  color: #F2F0E8;
-  background-color: #080909;
-  border: 1px solid #6cd9b1;
-  padding: 10px;
-  font-size: 30px;
-  text-align: right;
-  font-family: 'SpaceGrotesk', sans-serif;
-
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(108, 217, 177, 0.2);
-  border-radius: 14px;
+.skill-section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding-top: 90px;
+    border-bottom: #6cd9b1;
+    justify-content: center;
 }
 
-.skill-grid div:hover {
-    transform: translateY(-5px);
-    border-color: #6cd9b1;
-    background-color: rgba(108, 217, 177, 0.1);
+.skill-row {
+    font-family: 'SpaceGrotesk', sans-serif;
+    color: #F2F0E8;
+    font-size: 30px;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(108, 217, 177, 0.2);
+    padding-left: 60px;
+    padding-bottom: 25px;
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
